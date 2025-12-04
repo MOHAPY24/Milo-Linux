@@ -7,7 +7,7 @@
 
 - mfget: a simple fetch tool.
 - situation - a simple init system (SEE CREDITS!!).
-- argon - a Git based package manager.
+- argon - a Git based package manager (SEE CREDITS!!).
 - milo-nuke - emergency system wipe tool.
 - musl-libc - rebuilt musl libc for milo.
 

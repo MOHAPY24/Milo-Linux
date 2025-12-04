@@ -1,0 +1,16 @@
+#!/bin/dash
+# milonuke -- Say goodbye to your system
+# Genuinely dont run this script if you dont want to nuke your system
+
+echo "MiloNuke: are you sure you want to nuke your system? (y/N)"
+read answer
+if [ "$answer" != "y" ] && [ "$answer" != "Y" ]; then
+    echo "Aborting nuke."
+    exit 0
+fi
+echo "Nuking system..."
+# unmount all filesystems except /proc, /sys, /dev
+mount | grep -vE 'on /(proc|sys|dev)' | awk '{print $3}' | xargs -r umount -l
+# remove all files from root filesystem
+sudo rm -rf / --no-preserve-root # haha fs go brrr
+echo "System nuked."
