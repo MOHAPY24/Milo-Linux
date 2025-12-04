@@ -4,9 +4,9 @@
 #### This repository contains the core addons and tools for the MiloLinux operating system.
 
 ## Contents
-'
+
 - mfget: a simple fetch tool.
-- situation - a simple init system.
+- situation - a simple init system (SEE CREDITS!!).
 - argon - a Git based package manager.
 - milo-nuke - emergency system wipe tool.
 - musl-libc - rebuilt musl libc for milo.

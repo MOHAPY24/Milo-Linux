@@ -1,5 +1,5 @@
-#!/bin/sh
-# /bin/situation — dèrive init and service manager
+#!/bin/dash
+# /bin/situation — dèrive/MiloLinux init and service manager
 
 PATH="/bin:/sbin:/usr/bin:/usr/sbin"
 export PATH
