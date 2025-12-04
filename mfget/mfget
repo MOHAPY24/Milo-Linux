@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+else
+    NAME="Unkown"
+fi
+
+logo=$(cat <<EOF
+   _
+   |\'/-..--.  | Uptime: $(uptime | sed -E 's/^[^,]*up *//; s/, *[[:digit:]]* users.*//; s/min/minutes/; s/([[:digit:]]+):0?([[:digit:]]+)/\1 hours, \2 minutes/')
+  / _ _   ,  ; | Kernel: $(uname -r)
+  \`~=\`Y'~___.} | Distro: $NAME
+  <\`-....__.'  | Shell: $SHELL
+EOF
+)
+
+echo "$logo"
+
